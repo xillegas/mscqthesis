@@ -153,12 +153,12 @@ def run_trials_over_N(
 
 if __name__ == "__main__":
     print("Stress test Dürr–Høyer (mínimo) con N variable")
-    Ns = (8, 16, 32, 64, 128)
-    trials = 20
-    shots = 4096
-    tries_per_round = 3
-    base_rounds = 6
-    seed = 0
+    Ns = (8, 16, 32, 64, 128, 256)
+    trials = 50  # (o 100 si tienes tiempo)
+    shots = 8192
+    tries_per_round = 5
+    base_rounds = 10
+    seed=0
 
     run_trials_over_N(Ns=Ns, trials=trials, shots=shots,
                       base_rounds=base_rounds, tries_per_round=tries_per_round, seed=seed)
