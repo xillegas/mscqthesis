@@ -20,8 +20,21 @@
               "icon": "lucide-file",
               "title": "Assets Management for Pumps"
             }
+          },
+          {
+            "id": "53c796012130c87b",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.9.14"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.9.14"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -169,8 +182,13 @@
       "bases:Create new base": false
     }
   },
-  "active": "89edb1009fe1a43a",
+  "active": "53c796012130c87b",
   "lastOpenFiles": [
+    "code/grover_dh_stresstest.py",
+    "code/grover_dh_speedtest.py",
+    "code/qaoa_pump_selection.py",
+    "code/pump_health_baseline.py",
+    "docs/QUBO-Pump-Scheduling.md",
     "Other notebooks/Qiskit_MinMax_Prototype.ipynb",
     "docs/Minimum-Finding-Plan.md",
     "code/minimum_finding_durr_hoyer.py",
