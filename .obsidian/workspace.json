@@ -184,6 +184,7 @@
   },
   "active": "53c796012130c87b",
   "lastOpenFiles": [
+    "Other notebooks/explain.md",
     "code/grover_dh_stresstest.py",
     "code/grover_dh_speedtest.py",
     "code/qaoa_pump_selection.py",
