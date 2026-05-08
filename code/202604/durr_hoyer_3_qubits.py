@@ -2,7 +2,7 @@ from qiskit import QuantumCircuit
 from qiskit_aer import AerSimulator
 
 
-DATA = [7, 5, 4, 0, 7, 3, 2, 1]
+DATA = [7, 5, 4, 0, 7, 3, 2, 1] 
 
 
 def diffuser(n_qubits: int) -> QuantumCircuit:
@@ -86,7 +86,11 @@ def main() -> None:
 
         qc = build_grover_iteration(better_indices)
         counts = simulate_counts(qc)
-        measured_state = max(counts, key=counts.get)
+        measured_state = max(counts, key=counts.get) ## Aqui profe, lo que veo es que
+        """el algoritmo de Durr Hoyer solo elige un valor al azar, no el más medido.
+        Por qué toma el más medido? no lo se, supongo que optimiza la búsqueda"""
+        """Otra cosa que consigo es que no descarta el umbral anterior de forma correcta
+        para varios numeros se queda en "La medición no mejoró el candidato" """
         measured_index = int(measured_state, 2)
 
         print(qc.draw(output="text"))
@@ -99,6 +103,7 @@ def main() -> None:
             print(f"  Se actualiza el candidato minimo a {current_index:03b} con valor {current_value}\n")
         else:
             print("  La medicion no mejoro el candidato. En la version completa se repiten iteraciones.\n")
+            """Salida del programa más común, probablemente un bug que no actualiza el umbral"""
             break
 
         round_number += 1
@@ -108,3 +113,6 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+
+"""Este programa es una versión muy reducida de Durr Hoyer, probablemente tiene bugs o no está implementado completamente
+Yo creo que podemos considerar mejor la versión Qiskit_MinMax_Prototype_v3.ipynb """
