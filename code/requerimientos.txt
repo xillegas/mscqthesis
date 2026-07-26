@@ -1,0 +1,21 @@
+## instalar via conda:
+
+qiskit
+matplotlib
+
+### aer:
+
+conda install conda-forge::qiskit-aer
+
+pip install pylatexenc
+
+## Mosca con 
+
+%matplotlib inline
+
+Si faltaba pylatexenc y ahora ya no hay error, el dibujo sí se genera, 
+pero el notebook no lo está mostrando porque:
+
+usaste ;
+falta plt.show()
+o no está activo %matplotlib inline
